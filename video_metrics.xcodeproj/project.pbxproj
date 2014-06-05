@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3490FF51940ECEF00F99236 /* convolve.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FE81940ECEF00F99236 /* convolve.c */; };
+		D3490FF61940ECEF00F99236 /* decimate.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FEA1940ECEF00F99236 /* decimate.c */; };
+		D3490FF71940ECEF00F99236 /* math_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FEE1940ECEF00F99236 /* math_utils.c */; };
+		D3490FF81940ECEF00F99236 /* ms_ssim.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FF01940ECEF00F99236 /* ms_ssim.c */; };
+		D3490FF91940ECEF00F99236 /* mse.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FF11940ECEF00F99236 /* mse.c */; };
+		D3490FFA1940ECEF00F99236 /* psnr.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FF21940ECEF00F99236 /* psnr.c */; };
+		D3490FFB1940ECEF00F99236 /* ssim.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FF31940ECEF00F99236 /* ssim.c */; };
 		D36CE2AA193FE86300247AD4 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D36CE2A9193FE86300247AD4 /* main.c */; };
 		D36CE2AC193FE86300247AD4 /* video_metrics.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D36CE2AB193FE86300247AD4 /* video_metrics.1 */; };
 /* End PBXBuildFile section */
@@ -25,6 +32,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D3490FE81940ECEF00F99236 /* convolve.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = convolve.c; sourceTree = "<group>"; };
+		D3490FE91940ECEF00F99236 /* convolve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convolve.h; sourceTree = "<group>"; };
+		D3490FEA1940ECEF00F99236 /* decimate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decimate.c; sourceTree = "<group>"; };
+		D3490FEB1940ECEF00F99236 /* decimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decimate.h; sourceTree = "<group>"; };
+		D3490FEC1940ECEF00F99236 /* iqa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iqa.h; sourceTree = "<group>"; };
+		D3490FED1940ECEF00F99236 /* iqa_os.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iqa_os.h; sourceTree = "<group>"; };
+		D3490FEE1940ECEF00F99236 /* math_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math_utils.c; sourceTree = "<group>"; };
+		D3490FEF1940ECEF00F99236 /* math_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math_utils.h; sourceTree = "<group>"; };
+		D3490FF01940ECEF00F99236 /* ms_ssim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ms_ssim.c; sourceTree = "<group>"; };
+		D3490FF11940ECEF00F99236 /* mse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mse.c; sourceTree = "<group>"; };
+		D3490FF21940ECEF00F99236 /* psnr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = psnr.c; sourceTree = "<group>"; };
+		D3490FF31940ECEF00F99236 /* ssim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ssim.c; sourceTree = "<group>"; };
+		D3490FF41940ECEF00F99236 /* ssim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssim.h; sourceTree = "<group>"; };
 		D36CE2A6193FE86300247AD4 /* video_metrics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = video_metrics; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36CE2A9193FE86300247AD4 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D36CE2AB193FE86300247AD4 /* video_metrics.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = video_metrics.1; sourceTree = "<group>"; };
@@ -41,6 +61,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3490FE71940ECEF00F99236 /* iqa */ = {
+			isa = PBXGroup;
+			children = (
+				D3490FE81940ECEF00F99236 /* convolve.c */,
+				D3490FE91940ECEF00F99236 /* convolve.h */,
+				D3490FEA1940ECEF00F99236 /* decimate.c */,
+				D3490FEB1940ECEF00F99236 /* decimate.h */,
+				D3490FEC1940ECEF00F99236 /* iqa.h */,
+				D3490FED1940ECEF00F99236 /* iqa_os.h */,
+				D3490FEE1940ECEF00F99236 /* math_utils.c */,
+				D3490FEF1940ECEF00F99236 /* math_utils.h */,
+				D3490FF01940ECEF00F99236 /* ms_ssim.c */,
+				D3490FF11940ECEF00F99236 /* mse.c */,
+				D3490FF21940ECEF00F99236 /* psnr.c */,
+				D3490FF31940ECEF00F99236 /* ssim.c */,
+				D3490FF41940ECEF00F99236 /* ssim.h */,
+			);
+			path = iqa;
+			sourceTree = "<group>";
+		};
 		D36CE29D193FE86300247AD4 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +100,7 @@
 		D36CE2A8193FE86300247AD4 /* video_metrics */ = {
 			isa = PBXGroup;
 			children = (
+				D3490FE71940ECEF00F99236 /* iqa */,
 				D36CE2A9193FE86300247AD4 /* main.c */,
 				D36CE2AB193FE86300247AD4 /* video_metrics.1 */,
 			);
@@ -117,7 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3490FF61940ECEF00F99236 /* decimate.c in Sources */,
 				D36CE2AA193FE86300247AD4 /* main.c in Sources */,
+				D3490FF81940ECEF00F99236 /* ms_ssim.c in Sources */,
+				D3490FFB1940ECEF00F99236 /* ssim.c in Sources */,
+				D3490FF91940ECEF00F99236 /* mse.c in Sources */,
+				D3490FF51940ECEF00F99236 /* convolve.c in Sources */,
+				D3490FF71940ECEF00F99236 /* math_utils.c in Sources */,
+				D3490FFA1940ECEF00F99236 /* psnr.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +275,7 @@
 				D36CE2B1193FE86300247AD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

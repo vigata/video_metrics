@@ -14,7 +14,7 @@
 		D3490FF91940ECEF00F99236 /* mse.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FF11940ECEF00F99236 /* mse.c */; };
 		D3490FFA1940ECEF00F99236 /* psnr.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FF21940ECEF00F99236 /* psnr.c */; };
 		D3490FFB1940ECEF00F99236 /* ssim.c in Sources */ = {isa = PBXBuildFile; fileRef = D3490FF31940ECEF00F99236 /* ssim.c */; };
-		D36CE2AA193FE86300247AD4 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D36CE2A9193FE86300247AD4 /* main.c */; };
+		D36CE2AA193FE86300247AD4 /* video_metrics.c in Sources */ = {isa = PBXBuildFile; fileRef = D36CE2A9193FE86300247AD4 /* video_metrics.c */; };
 		D36CE2AC193FE86300247AD4 /* video_metrics.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D36CE2AB193FE86300247AD4 /* video_metrics.1 */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		D3490FF31940ECEF00F99236 /* ssim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ssim.c; sourceTree = "<group>"; };
 		D3490FF41940ECEF00F99236 /* ssim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssim.h; sourceTree = "<group>"; };
 		D36CE2A6193FE86300247AD4 /* video_metrics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = video_metrics; sourceTree = BUILT_PRODUCTS_DIR; };
-		D36CE2A9193FE86300247AD4 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		D36CE2A9193FE86300247AD4 /* video_metrics.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = video_metrics.c; sourceTree = "<group>"; };
 		D36CE2AB193FE86300247AD4 /* video_metrics.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = video_metrics.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D3490FE71940ECEF00F99236 /* iqa */,
-				D36CE2A9193FE86300247AD4 /* main.c */,
+				D36CE2A9193FE86300247AD4 /* video_metrics.c */,
 				D36CE2AB193FE86300247AD4 /* video_metrics.1 */,
 			);
 			path = video_metrics;
@@ -159,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3490FF61940ECEF00F99236 /* decimate.c in Sources */,
-				D36CE2AA193FE86300247AD4 /* main.c in Sources */,
+				D36CE2AA193FE86300247AD4 /* video_metrics.c in Sources */,
 				D3490FF81940ECEF00F99236 /* ms_ssim.c in Sources */,
 				D3490FFB1940ECEF00F99236 /* ssim.c in Sources */,
 				D3490FF91940ECEF00F99236 /* mse.c in Sources */,

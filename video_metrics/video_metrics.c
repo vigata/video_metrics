@@ -38,6 +38,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <getopt.h>
+#include <inttypes.h>
 #include "iqa/iqa.h"
 
 
@@ -75,19 +77,19 @@ typedef struct {
 } metrics_t;
 
 static double psnr_metric(pixel8 *ref, pixel8 *rec, int w, int h, int stride) {
-    return iqa_psnr(ref, rec, w, h, stride );
+    return iqa_psnr((unsigned char *)ref, (unsigned char *)rec, w, h, stride );
 }
 
 static double ssim_metric(pixel8 *ref, pixel8 *rec, int w, int h, int stride) {
-    return iqa_ssim(ref, rec, w, h, stride, 1, NULL );
+    return iqa_ssim((unsigned char *)ref, (unsigned char *)rec, w, h, stride, 1, NULL );
 }
 
 static double ms_ssim_metric(pixel8 *ref, pixel8 *rec, int w, int h, int stride) {
-    return iqa_ms_ssim(ref, rec, w, h, stride, NULL );
+    return iqa_ms_ssim((unsigned char *)ref, (unsigned char *)rec, w, h, stride, NULL );
 }
 
 static double mse_metric(pixel8 *ref, pixel8 *rec, int w, int h, int stride) {
-    return iqa_mse(ref, rec, w, h, stride );
+    return iqa_mse((unsigned char *)ref, (unsigned char *)rec, w, h, stride );
 }
 
 #define YUV420 1
@@ -206,7 +208,9 @@ void print_usage(metrics_t *metrics) {
         printf("\t%s\n", metrics->metrics[i]->name );
     }
 }
-int main(int argc, const char * argv[])
+
+
+int main(int argc, char * argv[])
 {
     int c;
 

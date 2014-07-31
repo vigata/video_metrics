@@ -169,15 +169,16 @@ static void picture_metric( metrics_t *metrics, picture_t *a, picture_t *b, int 
         case YUV420:
             for(int j=0; j<metrics->metric_count; j++ ) {
                 if( metrics->metrics[j]->used ) {
+                    double marr[3];
                     for(int i=0; i<3; i++) {
-                        m= metrics->metrics[j]->metric_fun(a->planes[i]->buf, b->planes[i]->buf, a->planes[i]->w, a->planes[i]->h, a->planes[i]->stride );
-                        metrics->metrics[j]->val += m * a->planes[i]->planesize;
+                        marr[i]= metrics->metrics[j]->metric_fun(a->planes[i]->buf, b->planes[i]->buf, a->planes[i]->w, a->planes[i]->h, a->planes[i]->stride );
+                        metrics->metrics[j]->val += marr[i] * a->planes[i]->planesize;
                     }
                     metrics->metrics[j]->val /= a->size;
                     metrics->metrics[j]->accum += metrics->metrics[j]->val;
                     metrics->metrics[j]->frames++;
                     
-                    if(verbose) printf("%d(%s): %.6f\n", metrics->metrics[j]->frames, metrics->metrics[j]->name, metrics->metrics[j]->val );
+                    if(verbose) printf("%d(%s): %.6f  Y:%.6f U:%.6f V:%.6f\n", metrics->metrics[j]->frames, metrics->metrics[j]->name, metrics->metrics[j]->val, marr[0],marr[1], marr[2] );
                 }
             }
 

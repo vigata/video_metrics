@@ -42,6 +42,8 @@
 #include <inttypes.h>
 #include "iqa/iqa.h"
 
+#define VERSION_MAJOR 0
+#define VERSION_MINOR 76
 
 typedef uint8_t pixel8;
 
@@ -203,6 +205,7 @@ static void picture_metric_finalize( metrics_t *metrics ) {
 
 
 void print_usage(metrics_t *metrics) {
+    printf("video_metrics %d.%d \nAlberto Vigata 2014\n\nUsage:\n", VERSION_MAJOR, VERSION_MINOR);
     printf("video_metrics -a ref.yuv -b rec.yuv -m [psnr|ssim|ms_ssim|psnr,ssim|psnr,ssim,ms_ssim|...] -w width -h height -f format\n\n");
     printf("Available metrics:\n");
     for( int i=0; i<metrics->metric_count; i++ ) {

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Alberto Vigata ( http://github.com/concalma )
+ * Copyright (c) 2019, Alberto Vigata ( http://github.com/vigata )
  * All rights reserved.
  *
  * The BSD License
@@ -44,6 +44,8 @@
 
 #define VERSION_MAJOR 0
 #define VERSION_MINOR 76
+#define AUTHOR "Alberto Vigata"
+#define YEAR 2019
 
 typedef uint8_t pixel8;
 
@@ -166,7 +168,6 @@ static void picture_metric( metrics_t *metrics, picture_t *a, picture_t *b, int 
         metrics->metrics[i]->val = 0;
     }
 
-    double m;
     switch (a->format) {
         case YUV420:
             for(int j=0; j<metrics->metric_count; j++ ) {
@@ -205,7 +206,7 @@ static void picture_metric_finalize( metrics_t *metrics ) {
 
 
 void print_usage(metrics_t *metrics) {
-    printf("video_metrics %d.%d \nAlberto Vigata 2014\n\nUsage:\n", VERSION_MAJOR, VERSION_MINOR);
+    printf("video_metrics %d.%d \n%s %d\n\nUsage:\n", VERSION_MAJOR, VERSION_MINOR, AUTHOR, YEAR);
     printf("video_metrics -a ref.yuv -b rec.yuv -m [psnr|ssim|ms_ssim|psnr,ssim|psnr,ssim,ms_ssim|...] -w width -h height -f format\n\n");
     printf("Available metrics:\n");
     for( int i=0; i<metrics->metric_count; i++ ) {
